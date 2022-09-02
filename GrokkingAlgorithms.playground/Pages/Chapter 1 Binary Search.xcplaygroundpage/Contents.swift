@@ -47,10 +47,12 @@ binarySearch(list: myList, item: -1) // Returns nil
 
 //: How you might do this natively in Swift:
 
-myList.index(of: 3)
-myList.index(of: -1)
+myList.firstIndex(of: 3)
+myList.firstIndex(of: -1)
 
 //: Unfortunately, index(of:) uses linear search. So, we settle for a more Swift-like way to implement a sorted array:
+
+//: add extension
 
 extension Array where Element: Comparable {
     
@@ -134,7 +136,7 @@ let names = [
 
 names.count
 binarySearchCountingSteps(list: names, item: "ex") // Returns 7
-
+binarySearchCountingSteps(list: names, item: "de")
 //: *1.2* Suppose you double the size of the list. What's the maximum number of steps now?
 
 let doubleNames = [
