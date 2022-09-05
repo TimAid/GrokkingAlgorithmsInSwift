@@ -13,6 +13,16 @@ func countdown(_ index: Int) {
     }
 }
 
+
+func countBack(_ index: Int) {
+    print(index)
+    if index <= 0 {
+        return
+    } else {
+        countBack(index - 1)
+    }
+}
+
 print("countdown:")
 countdown(3)
 
